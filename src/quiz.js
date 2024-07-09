@@ -37,7 +37,33 @@ class Quiz {
         } else if (this.currentQuestionIndex === this.questions.length) {
             return true
         }
-    }
-}
 
-// 6. hasEnded()
+    }
+
+    filterQuestionsByDifficulty(difficulty) {
+
+        if (typeof difficulty === 'number') {
+            const filteredQuestions = this.questions.filter(eachQuestion => {
+                return eachQuestion.difficulty === difficulty
+            });
+            this.questions = filteredQuestions
+        }
+    };
+
+    averageDifficulty() {
+        const allDifficulty = this.questions.reduce((acc, eachQuestion) => {
+            return acc + eachQuestion.difficulty
+        }, 0);
+        return allDifficulty / this.questions.length
+    }
+
+};
+
+
+
+
+
+
+//filterQuestionsByDifficulty(difficulty) {
+
+
