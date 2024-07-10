@@ -1,6 +1,5 @@
 class Quiz {
-    // YOUR CODE HERE:
-    //
+
     constructor(questions, timeLimit, timeRemaining) {
         this.questions = questions
         this.timeLimit = timeLimit
@@ -40,4 +39,4 @@ class Quiz {
     }
 }
 
-// 6. hasEnded()
+
